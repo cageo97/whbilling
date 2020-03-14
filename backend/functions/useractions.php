@@ -1,9 +1,9 @@
 <?php
     namespace backend\functions;
 
-    use backend\models\examples;
+    use backend\models\users;
 
-    class exampleactions {
+    class useractions {
 
     }
 ?>
