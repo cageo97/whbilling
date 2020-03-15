@@ -58,5 +58,10 @@
             ]);
         }
 
+        public function logout($rq, $re) {
+            unset($_SESSION["uid"]);
+            return $re->withRedirect('/auth/login');
+        }
+
     }
 ?>

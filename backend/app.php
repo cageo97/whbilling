@@ -68,6 +68,12 @@
         return new \backend\functions\useractions;
     };
 
+
+    // check if user is logged in and pass that to the template globaly
+    if(isset($_SESSION["uid"])) {
+        $container["view"]->getEnvironment()->addGlobal('loggedin', true);
+    }
+
     // include application routes
     require "approutes.php";
 ?>
