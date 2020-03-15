@@ -48,4 +48,8 @@
             return $this->container->view->render($re, "admin/product.twig");
         }
 
+        public function product_action($rq, $re) {
+            return $this->container->view->render($re, "admin/product_action.twig");
+        }
+
     }

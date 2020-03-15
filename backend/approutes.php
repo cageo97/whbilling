@@ -23,6 +23,8 @@
         $this->map(['get', 'post'], '/client/add', admincontrol::class . ':client_add');
 
         $this->map(['get', 'post'], '/product', admincontrol::class . ':product');
+        $this->map(['get', 'post'], '/product/add', admincontrol::class . ':product_action');
+        $this->map(['get', 'post'], '/product/edit/{id}', admincontrol::class . ':product_action');
     });
     
 

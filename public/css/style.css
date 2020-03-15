@@ -1,12 +1,30 @@
 body {
     color: #2a2e36;
     font-family: Roboto,sans-serif;
+    background: #f6f7f8;
 }
 
 .navbar {
-    border-bottom: 1px solid #e6e8ec;
+    background: #fff;
+    min-height: 70px;
 }
 
-.navbar-brand {
-    font-weight: bold;
+header {
+    background: #fff;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,.08);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+.card {
+    box-shadow: 0 0 14px 0 rgba(0,0,0,.08);
+    border: 0px;
+}
+
+
+/* why do I have to do this? */
+.table-borderless td,
+.table-borderless th {
+    border: 0;
 }
