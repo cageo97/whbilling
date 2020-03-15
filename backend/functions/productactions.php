@@ -9,5 +9,9 @@
             return products::get();
         }
 
+        public function getby_id($id) {
+            return products::where('id', $id)->first();
+        }
+
 
     }

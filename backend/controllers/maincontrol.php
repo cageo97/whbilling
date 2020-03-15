@@ -10,7 +10,18 @@
         }
 
         public function buy_product($rq, $re, $args) {
-            return $this->container->view->render($re, "buy_product.twig");
+            $id = $args["id"];
+
+            $product = $this->container->productactions->getby_id($id);
+
+            if(!$product) {
+                echo "Product not found";
+                die();
+            }
+
+            return $this->container->view->render($re, "buy_product.twig", [
+                "product" => $product
+            ]);
         }
 
         public function index($rq, $re, $args) {

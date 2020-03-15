@@ -22,7 +22,7 @@
                     <div class="card-body">
                         <table class="table mt-0 mb-0">
                             <tr>
-                                <td>KVM 1</td>
+                                <td>{{ product.name|e }}</td>
                                 <td class="text-right">$5.00</td>
                             </tr>
                             <tr>
@@ -35,7 +35,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="text-center"><a href="" class="btn btn-success">Check Out</a></div>
+                <div class="text-center">
+                    <a href="" class="btn btn-success mb-3">Check Out</a>
+                    <p>After clicking check out you will be redirected to the product/service's invoice.</p>
+                </div>
             </div>
         </div>
     </div>
