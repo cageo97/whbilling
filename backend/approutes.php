@@ -13,6 +13,9 @@
 
     $slim->group('/admin', function(){
         $this->get('', admincontrol::class . ':index');
+
+        $this->map(['get', 'post'], '/client', admincontrol::class . ':client');
+        $this->map(['get', 'post'], '/client/add', admincontrol::class . ':client_add');
     });
     
 
