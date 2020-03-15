@@ -1,8 +1,20 @@
 <?php
     use backend\controllers\maincontrol;
     use backend\controllers\authcontrol;
+    use backend\controllers\admincontrol;
 
-    $slim->get('/', maincontrol::class . ':index');
+
+    $slim->group('', function(){
+        $this->get('/', maincontrol::class . ':index');
+        $this->get('/services', maincontrol::class . ':services');
+        $this->get('/billing', maincontrol::class . ':billing');
+        $this->get('/tickets', maincontrol::class . ':tickets');
+    });
+
+    $slim->group('/admin', function(){
+        $this->get('', admincontrol::class . ':index');
+    });
+    
 
     $slim->group('/auth', function() {
         $this->map(['get', 'post'], '/login', authcontrol::class . ':login');
