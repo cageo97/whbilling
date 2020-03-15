@@ -32,5 +32,9 @@
             return $this->container->view->render($re, "services.twig");
         }
 
+        public function billing($rq, $re, $args) {
+            return $this->container->view->render($re, "billing.twig");
+        }
+
     }
 ?>

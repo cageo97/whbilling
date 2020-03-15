@@ -1,0 +1,40 @@
+{% extends "includes/base.twig" %}
+{% block page_title %}{% endblock %}
+{% block page_head %}{% endblock %}
+{% block page_body %}
+    {% include "includes/navbar.twig" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header">Actions</div>
+                    <div class="list-group">
+                        <a href="/buy" class="list-group-item list-group-item-action">Order New Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <h3>My Invoices</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Created</th>
+                            <th>Due</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>KVM 1</td>
+                            <td>$60.00</td>
+                            <td>2020/09/01</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
