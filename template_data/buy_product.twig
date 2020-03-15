@@ -1,0 +1,42 @@
+{% extends "includes/base.twig" %}
+{% block page_title %}{% endblock %}
+{% block page_head %}{% endblock %}
+{% block page_body %}
+    {% include "includes/navbar.twig" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h4>Billing Cycle</h4>
+                <table class="table table-borderless">
+                    <tr>
+                        <td><input type="radio" name="billing"> $5.00 CAD Monthly</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="billing"> $5.00 CAD Monthly</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <h4>Order Summary</h4>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <table class="table mt-0 mb-0">
+                            <tr>
+                                <td>KVM 1</td>
+                                <td class="text-right">$5.00</td>
+                            </tr>
+                            <tr>
+                                <td>Setup Fee:</td>
+                                <td class="text-right">$0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-right">Total Due Today: <b>$5.00</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-center"><a href="" class="btn btn-success">Check Out</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "includes/base.twig" %}
+{% block page_title %}{% endblock %}
+{% block page_head %}{% endblock %}
+{% block page_body %}
+    {% include "includes/navbar.twig" %}
+    <div class="container">
+        <div class="text-center">
+            <h2>VPS Hosting</h2>
+            <a href="">VPS Hosting</a> <a href="">SEO Tools</a>
+        </div>
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="text-center">{{ product.name|e }}</h3>
+                        <h5 class="text-center">$50.34<small>/Monthly</small></h5>
+                        <div>{{ product.description|raw }}</div>
+                        <div class="text-center"><a href="/buy/{{ product.id|e }}" class="btn btn-success">Order Now</a></div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                <p>No products found</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

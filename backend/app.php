@@ -68,6 +68,10 @@
         return new \backend\functions\useractions;
     };
 
+    $container["productactions"] = function($container) {
+        return new \backend\functions\productactions;
+    };
+
 
     // check if user is logged in and pass that to the template globaly
     if(isset($_SESSION["uid"])) {

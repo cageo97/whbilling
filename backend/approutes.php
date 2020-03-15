@@ -5,6 +5,11 @@
 
 
     $slim->group('', function(){
+        $this->get('/buy', maincontrol::class . ':buy');
+        $this->get('/buy/{id}', maincontrol::class . ':buy_product');
+    });
+
+    $slim->group('', function(){
         $this->get('/', maincontrol::class . ':index');
         $this->get('/services', maincontrol::class . ':services');
         $this->get('/billing', maincontrol::class . ':billing');
