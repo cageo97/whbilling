@@ -8,7 +8,10 @@
         }
 
         public function client($rq, $re) {
-            return $this->container->view->render($re, "admin/client.twig");
+
+            return $this->container->view->render($re, "admin/client.twig", [
+                "clients" => $this->container->useractions->list()
+            ]);
         }
 
         public function client_add($rq, $re) {

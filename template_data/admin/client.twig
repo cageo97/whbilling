@@ -1,0 +1,50 @@
+{% extends "includes/base.twig" %}
+{% block page_title %}{% endblock %}
+{% block page_head %}{% endblock %}
+{% block page_body %}
+    {% include "includes/navbar.twig" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                {% include "includes/admin_sidebar.twig" %}
+            </div>
+            <div class="col-lg-9">
+                <h3>Clients</h3>
+                <form action="#" method="GET">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Email Address</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Type</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                </form>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Services</th>
+                            <th>Type</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for client in clients %}
+                            <tr>
+                                <td>{{ client.id|e }}</td>
+                                <td>{{ client.email|e }}</td>
+                                <td>2(2)</td>
+                                <td>user</td>
+                                <td>{{ client.created_at }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
