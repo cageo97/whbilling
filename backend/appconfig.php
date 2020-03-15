@@ -11,7 +11,7 @@
 
     define('CONFIG_MYSQL', [
         "driver" => "mysql",
-        "host" => "localhost",
+        "host" => "172.17.0.1",
         "database" => "whbilling",
         "username" => "newuser",
         "password" => "password",

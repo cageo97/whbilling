@@ -13,7 +13,7 @@
                     $error = "All fields are required";
                 } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error = "Invalid email format";
-                } elseif($uid = $useractions->login($email, $password)) {
+                } elseif($uid = $this->container->useractions->login($email, $password)) {
                     $_SESSION["uid"] = $uid;
                     return $re->withRedirect('/');
                 } else {
