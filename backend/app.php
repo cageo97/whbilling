@@ -74,8 +74,10 @@
 
 
     // check if user is logged in and pass that to the template globaly
+    // ya I know, will sort later
     if(isset($_SESSION["uid"])) {
         $container["view"]->getEnvironment()->addGlobal('loggedin', true);
+        $container["view"]->getEnvironment()->addGlobal('usertype',  $container["useractions"]->getby_id($_SESSION["uid"])["type"]);
     }
 
     // include application routes

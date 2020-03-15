@@ -4,10 +4,15 @@
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                {% if loggedin %}
+                {% if usertype == "customer" %}
                 <li class="nav-item active"><a class="nav-link" href="/services">Services</a></li>
                 <li class="nav-item active"><a class="nav-link" href="/billing">Billing</a></li>
                 <li class="nav-item active"><a class="nav-link" href="/tickets">Tickets</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/auth/logout">Logout</a></li>
+                {% elseif usertype == "admin" %}
+                <li class="nav-item active"><a class="nav-link" href="/admin/client">Clients</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/admin/orders">Orders</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/admin/product">Products</a></li>
                 <li class="nav-item active"><a class="nav-link" href="/auth/logout">Logout</a></li>
                 {% else %}
                 <li class="nav-item active"><a class="nav-link" href="/auth/login">Login</a></li>

@@ -44,4 +44,8 @@
             ]);
         }
 
+        public function product($rq, $re) {
+            return $this->container->view->render($re, "admin/product.twig");
+        }
+
     }

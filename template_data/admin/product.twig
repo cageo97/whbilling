@@ -1,0 +1,40 @@
+{% extends "includes/base.twig" %}
+{% block page_title %}{% endblock %}
+{% block page_head %}{% endblock %}
+{% block page_body %}
+    {% include "includes/navbar.twig" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                {% include "includes/admin_sidebar.twig" %}
+            </div>
+            <div class="col-lg-9">
+                <h3>Products</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Module</th>
+                            <th>Pay Type</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                            <tr>
+                                <td>{{ product.id|e }}</td>
+                                <td>{{ product.name|e }}</td>
+                                <td>{{ product.category }}</td>
+                                <td>{{ product.module }}</td>
+                                <td>user</td>
+                                <td>{{ client.created_at }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

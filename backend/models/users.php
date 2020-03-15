@@ -9,8 +9,12 @@
 
         protected $fillable = [
             "email",
-            "password"
+            "password",
+            "type"
+        ];
+
+        protected $attributes = [
+            "type" => "customer"
         ];
 
     }
-?>
