@@ -7,7 +7,11 @@
 
         protected $table = "invoices";
 
-        protected $fillable = [];
+        protected $fillable = [
+            "uid",
+            "pid",
+            "price"
+        ];
 
     }
 ?>

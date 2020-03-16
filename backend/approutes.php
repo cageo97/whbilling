@@ -6,7 +6,7 @@
 
     $slim->group('', function(){
         $this->get('/buy', maincontrol::class . ':buy');
-        $this->get('/buy/{id}', maincontrol::class . ':buy_product');
+        $this->map(['get', 'post'], '/buy/{id}', maincontrol::class . ':buy_product');
     });
 
     $slim->group('', function(){
@@ -21,10 +21,13 @@
 
         $this->map(['get', 'post'], '/client', admincontrol::class . ':client');
         $this->map(['get', 'post'], '/client/add', admincontrol::class . ':client_add');
+        $this->map(['get', 'post'], '/client/edit/{id}', admincontrol::class . ':client_edit');
 
         $this->map(['get', 'post'], '/product', admincontrol::class . ':product');
         $this->map(['get', 'post'], '/product/add', admincontrol::class . ':product_action');
         $this->map(['get', 'post'], '/product/edit/{id}', admincontrol::class . ':product_action');
+
+        $this->map(['get', 'post'], '/settings', admincontrol::class . ':settings');
     });
     
 

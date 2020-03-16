@@ -1,7 +1,7 @@
 <?php
     define('APP_SESSION', true);
     define('APP_DEBUG', true);
-    define('PHP_REPORTING', true);
+    define('PHP_REPORTING', false);
 
     define('APP_TWIG', [
         "templates" => "../template_data",

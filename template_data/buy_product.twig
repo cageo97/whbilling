@@ -3,6 +3,18 @@
 {% block page_head %}{% endblock %}
 {% block page_body %}
     {% include "includes/navbar.twig" %}
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>{{ product.name|e }}</h4>
+                </div>
+                <div class="col-lg-6 text-right">
+                
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -36,7 +48,9 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="" class="btn btn-success mb-3">Check Out</a>
+                    <form action="" method="POST">
+                        <button class="btn btn-success mb-3">Check Out</button>
+                    </form>
                     <p>After clicking check out you will be redirected to the product/service's invoice.</p>
                 </div>
             </div>

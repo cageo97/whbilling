@@ -5,6 +5,12 @@
 
     class invoiceactions {
 
-        
+        public function create($uid, $pid, $price) {
+            return invoices::create([
+                "uid" => $uid,
+                "pid" => $pid,
+                "price" => $price 
+            ])->id;
+        }
 
     }

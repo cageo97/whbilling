@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h4>VPS Hosting</h4>
+                    <h4>Products</h4>
                 </div>
                 <div class="col-lg-6 text-right">
                     <a href="/admin/product/add" class="btn btn-primary">Add product</a>
@@ -18,31 +18,34 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Products</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Module</th>
-                            <th>Pay Type</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for product in products %}
+                <div class="card">
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <td>{{ product.id|e }}</td>
-                                <td>{{ product.name|e }}</td>
-                                <td>{{ product.category }}</td>
-                                <td>{{ product.module }}</td>
-                                <td>user</td>
-                                <td>{{ client.created_at }}</td>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Module</th>
+                                <th>Pay Type</th>
+                                <th>Stock</th>
+                                <th></th>
                             </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id|e }}</td>
+                                    <td>{{ product.name|e }}</td>
+                                    <td>{{ product.category }}</td>
+                                    <td>{{ product.module }}</td>
+                                    <td>user</td>
+                                    <td>{{ client.created_at }}</td>
+                                    <td><a href="/admin/product/edit/{{ product.id|e }}">Manage</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

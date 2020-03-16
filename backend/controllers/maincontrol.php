@@ -19,6 +19,11 @@
                 die();
             }
 
+            if($rq->isPost()) {
+                $iid = $this->container->invoiceactions->create($_SESSION["uid"], $id, 0);
+                return $re->withRedirect("/");
+            }
+
             return $this->container->view->render($re, "buy_product.twig", [
                 "product" => $product
             ]);

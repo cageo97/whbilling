@@ -72,6 +72,9 @@
         return new \backend\functions\productactions;
     };
 
+    $container["invoiceactions"] = function($container) {
+        return new \backend\functions\invoiceactions;
+    };
 
     // check if user is logged in and pass that to the template globaly
     // ya I know, will sort later

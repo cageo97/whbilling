@@ -3,13 +3,20 @@
 {% block page_head %}{% endblock %}
 {% block page_body %}
     {% include "includes/navbar.twig" %}
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Add New Client</h4>
+                </div>
+                <div class="col-lg-6 text-right">
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                {% include "includes/admin_sidebar.twig" %}
-            </div>
-            <div class="col-lg-9">
-                <h3>Add New Client</h3>
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <form action="#" method="POST">
@@ -28,7 +35,7 @@
                             <div class="form-group">
                                 <span class="text-danger">{{ form.error }}</span>
                             </div>
-                            <button class="btn btn-success">Create Client</button>
+                            <button class="btn btn-primary">Create Client</button>
                         </form>
                     </div>
                 </div>

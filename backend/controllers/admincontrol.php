@@ -35,7 +35,7 @@
 
             }
 
-            return $this->container->view->render($re, "admin/client_add.twig", [
+            return $this->container->view->render($re, "admin/client_action.twig", [
                 "form" => [
                     "error" => $error,
                     "success" => $success,
@@ -44,12 +44,22 @@
             ]);
         }
 
+        public function client_edit($rq, $re) {
+            return $this->container->view->render($re, "admin/client_action.twig");
+        }
+
         public function product($rq, $re) {
-            return $this->container->view->render($re, "admin/product.twig");
+            return $this->container->view->render($re, "admin/product.twig", [
+                "products" => $this->container->productactions->listby_category('')
+            ]);
         }
 
         public function product_action($rq, $re) {
             return $this->container->view->render($re, "admin/product_action.twig");
+        }
+
+        public function settings($rq, $re) {
+            return $this->container->view->render($re, "admin/settings.twig");
         }
 
     }
