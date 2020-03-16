@@ -55,6 +55,12 @@
         }
 
         public function product_action($rq, $re) {
+
+            if($rq->isPost()) {
+                $name = $rq->getParam("name");
+                $description = $rq->getParam("description");
+            }
+
             return $this->container->view->render($re, "admin/product_action.twig");
         }
 
