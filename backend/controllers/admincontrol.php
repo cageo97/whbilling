@@ -59,6 +59,8 @@
             if($rq->isPost()) {
                 $name = $rq->getParam("name");
                 $description = $rq->getParam("description");
+
+                $this->container->productactions->create($name, $description, "");
             }
 
             return $this->container->view->render($re, "admin/product_action.twig");

@@ -7,7 +7,11 @@
 
         protected $table = "products";
 
-        protected $fillable = [];
+        protected $fillable = [
+            "name",
+            "description",
+            "pricing"
+        ];
 
     }
 ?>
